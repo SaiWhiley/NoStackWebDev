@@ -3,7 +3,9 @@
 
 <head>
     <title>Search</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />    
+    <script type = "text/javascript" src = "wkshp6scripts.js"></script>
+    <script type = "text/javascript" src= "geoLocation.js"></script>
 </head>
 
 <body>
@@ -25,7 +27,8 @@
         <p>By Suburb: <input type="text" id="suburbIn" value="" /> By Park Name: <input type="text" id="parkIn" value="" />
         </p>
             <form action="results.html">
-                <p><input type="submit" id="getGeolocation" value="Find Parks Near Me" /></p>
+                <p><input type="submit" id="getGeolocation" value="Find Parks Near Me" /> 
+                <span id = "status" style = "visibility:hidden"> Error </span></p>
             </form>
     </div>
 
