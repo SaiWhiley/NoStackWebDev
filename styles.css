@@ -1,28 +1,46 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    height: 100%;
+    background-color: #565656;
 }
 
+h1{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+p{
+    margin-left:25px;
+}
+
+
 /*pageHeader*/
+.pageHeader{
+    margin: 0;
+}
 .pageHeader h1{
     margin: 0;
     padding: 10px;
-    background-color: #4c8f50;
+    background-color: #76323f;
     display: block;
     text-align: center;
-     
 }
+
 .pageHeader a{
     text-decoration: none;
-    color: white;  
+    color: #d7cec7;  
 }
 
 .pageHeader a:hover{
-    color: #4ccf50
+    color: white;
 }
 /*end pageHeader */
 
 /*navBar */
+.navBar{
+    margin: 0;
+}
 .navBar ul{
     list-style-type: none;
     margin: 0;
@@ -50,5 +68,14 @@ body{
 .navBar .active {
     background-color: #4caf50
 }
-
 /*end navBar*/
+
+.content {
+    width: 1200px;
+    height: auto;
+    min-height: 1000px;
+    margin-left : auto;
+    margin-right : auto;
+    background-color: #d7cec7;
+    padding: 1px;
+}
