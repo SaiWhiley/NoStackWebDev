@@ -1,6 +1,54 @@
-ul{
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/*pageHeader*/
+.pageHeader h1{
+    margin: 0;
+    padding: 10px;
+    background-color: #4c8f50;
+    display: block;
+    text-align: center;
+     
+}
+.pageHeader a{
+    text-decoration: none;
+    color: white;  
+}
+
+.pageHeader a:hover{
+    color: #4ccf50
+}
+/*end pageHeader */
+
+/*navBar */
+.navBar ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: inline;
+    overflow: hidden;
+    background-color: #333; 
 }
+
+.navBar li{
+    float: left;
+}
+
+.navBar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;    
+}
+
+.navBar li a:hover{
+    background-color: #111;
+}
+
+.navBar .active {
+    background-color: #4caf50
+}
+
+/*end navBar*/
