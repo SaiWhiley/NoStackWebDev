@@ -52,7 +52,7 @@ function surnameChanged(){
 
 function checkEmail(){
     var form = document.getElementById("userForm")
-    var regex = /\S+@\S+/;
+    var regex = /\S+@\S+\.\S+/;
 
     if(regex.test(form.email.value)){
         return true;
@@ -72,19 +72,13 @@ function checkDOB(){
     var form = document.getElementById("userForm")
     var regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/;
 
-    // if (regex.test(form.DOB.value)){
-    //     return true;
-    // } else{
-    //     document.getElementById("DOBMissing").style.visibility = visible;
-    //     return false;
-    // }
-
-    if(form.DOB.value == ""){
+    if (regex.test(form.DOB.value)){
+        return true;
+    } else{
         document.getElementById("DOBMissing").style.visibility = "visible";
         return false;
-    }else{
-        return true;
     }
+
 }
 
 function DOBChanged(){

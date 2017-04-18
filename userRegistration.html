@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>version 2</title>
+    <meta charset="utf-8"/>
+    <title>User Registration</title>
     <script type="text/javascript" src="formValidation.js"></script>
     <link type="text/css" rel="stylesheet" href="styles.css" />
 
@@ -35,7 +36,7 @@
             <p>Email address: <input type="email" id="email" placeholder="email@example.com" onkeypress="emailChanged()" />
             <span id="emailMissing" class="error-message" value="">Please enter a valid email.</span></p>
 
-            <p>Date of birth (dd/mm/yyyy): <input type="date" id="DOB" placeholder="dd/mm/yyyy" onkeypress="DOBChanged()" />
+            <p>Date of birth (dd/mm/yyyy): <input type="date" id="DOB" placeholder="dd/mm/yyyy" onchange="DOBChanged()" />
             <span id="DOBMissing" class="error-message">Please enter a valid D.O.B.</span></p>
 
             <p>Postcode: <input type="text" id="postcode" value="" onkeypress="postcodeChanged()" />
