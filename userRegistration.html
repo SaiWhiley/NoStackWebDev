@@ -20,19 +20,27 @@
         </ul>
     </div>
     <!-- end header -->
-</body>
 
-<body>
     <form>
-        <p>First Name: <input type="text" name="firstName"></p>
-        <p>Surname: <input type="text" name="surname"></p>
-        <p>Email: <input type="text" name="email"></p>
-        <p>Date of Birth (dd/mm/yyyy): <input type="text" style="width:14px" name="DOBd">/<input type="text" style="width:14px"
-                name="DOBm">/<input type="text" style="width:28px" name="DOBy"></p>
-        <p>Postcode: <input type="text" name="postcode"></p>
-        <p>Username: <input type="text" name="username"></p>
-        <p>Create password: <input type="password" name="password"></p>
-        <p>Confirm password: <input type="password" name="confirmPassword"></p>
+	    <p>First Name: <input type="text" id="firstName" required/></p>
+
+	    <p>Surname: <input type="text" id="surname" required/></p>
+
+        <p>Email: <input type="email" id="email" required/></p>
+
+	    <p>Date of Birth (dd/mm/yyyy): <input type="date" id="DOB" required/></p>
+
+	    <p>Postcode: <input type="text" id="postcode" required/></p>
+
+		<p>Username: <input type="text" id="username" required/></p>
+
+	    <p>Create password: <input type="password" id="password" required/></p>
+
+		<p>Confirm password: <input type="password" id="confirmPassword" required/></p>
+
+		<p>Do you agree to our terms and conditions? <input type="checkbox" id="terms" required/></p>
+			
+		<p><input type = "submit" value = "Submit"/></p>
     </form>
 </body>
 

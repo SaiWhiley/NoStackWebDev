@@ -1,3 +1,8 @@
+.error-message {
+    color: red;
+    visibility: hidden;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -79,3 +84,4 @@ p{
     background-color: #d7cec7;
     padding: 1px;
 }
+
