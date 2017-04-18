@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>version 2</title>
+        <script type = "text/javascript" src = "formValidation.js"></script>
+        <link type = "text/css" rel="stylesheet" href= "styles.css"/>
+        
+    </head>
+    <body>
+        <h1>Form</h1>
+                <form id="userForm">
+          <p>First Name: <input type = "text" id = "firstName" value = "" onkeypress="firstNameChanged()"/>
+          <span id = "firstNameMissing" class = "error-message" >First Name is a required field</span></p>
+
+          <p>Surname: <input type = "text" id = "surname" value = "" onkeypress="surnameChanged()"/>
+          <span id = "surnameMissing" class = "error-message" >Surname is a required field</span></p>
+
+          <p>Email address: <input type="email" id = "email" placeholder="email@example.com" onkeypress="emailChanged()"/>
+          <span id="emailMissing" class="error-message" value="">Email is a required field</span></p>
+
+          <p>Date of birth (dd/mm/yyyy): <input type="date" id="DOB" placeholder="dd/mm/yyyy" onkeypress="DOBChanged()"/>
+          <span id="DOBMissing" class="error-message">D.O.B is a required field</span></p>
+
+          <p>Postcode: <input type="text" id="postcode" value="" onkeypress="postcodeChanged()"/>
+          <span id="postcodeMissing" class="error-message">Postcode is a required field</span></p>
+
+          <p>Create username: <input type="text" id="username" value="" onkeypress="usernameChanged()"/>
+          <span id="usernameMissing" class="error-message">Username is a required field</span></p>
+
+          <p>Create password: <input type = "password" id= "password" value="" onkeypress="passwordChanged()"/>
+          <span id = "passwordMissing" class = "error-message" >Password is a required field</span></p>
+
+          <p>Confirm password: <input type = "password" id= "confirmPassword" onkeypress="password2Changed()"/>
+          <span id = "passwordsNotMatch" class="error-message">Passwords do not match</span></p>
+
+          <p>Do you agree to our terms and conditions? <input type="checkbox" id="terms" onclick="termsChecked()" />
+          <span id="termsNotAgreed" class="error-message">You must agree to the terms and conditions to continue</span></p>
+
+          <p><input type = "button" value = "Submit" onclick="validate();"/></p>
+           
+        </form>
+    </body>
+</html>
