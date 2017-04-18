@@ -17,15 +17,15 @@ function validate(){
 
 function checkFirstName(){
     var form = document.getElementById("userForm")
-    var name = document.getElementById("firstName")
+    var regex1 = /^[a-z]+/i;
+    var regex2 = /^[0-9]+/;
 
-    if(/^[a-z]+/i.test(name)){
+    if(regex1.test(form.firstName.value)){
         return true;
-    }else if(form.firstName.value == ""){
+    }else if((form.firstName.value == "")||(regex2.test(form.firstName.value))){
         document.getElementById("firstNameMissing").style.visibility = "visible";
         return false;
     }
-
 }
 
 function firstNameChanged(){
@@ -34,11 +34,14 @@ function firstNameChanged(){
 
 function checkSurname(){
     var form = document.getElementById("userForm")
-    if(form.surname.value == ""){
+    var regex1 = /^[a-z]+/i;
+    var regex2 = /^[0-9]+/;
+
+    if (regex1.test(form.surname.value)){
+        return true;
+    } else if ((form.surname.value == "")||(regex2.test(form.surname.value))){
         document.getElementById("surnameMissing").style.visibility = "visible";
         return false;
-    }else{
-        return true;
     }
 }
 
@@ -48,12 +51,16 @@ function surnameChanged(){
 
 
 function checkEmail(){
-    if(document.getElementById("userForm").email.value == ""){
+    var form = document.getElementById("userForm")
+    var regex = /\S+@\S+/;
+
+    if(regex.test(form.email.value)){
+        return true;
+    }else {
         document.getElementById("emailMissing").style.visibility = "visible";
         return false;
-    }else{
-        return true;
     }
+
 }
 
 function emailChanged(){
@@ -62,7 +69,17 @@ function emailChanged(){
 
 
 function checkDOB(){
-    if(document.getElementById("userForm").DOB.value == ""){
+    var form = document.getElementById("userForm")
+    var regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/;
+
+    // if (regex.test(form.DOB.value)){
+    //     return true;
+    // } else{
+    //     document.getElementById("DOBMissing").style.visibility = visible;
+    //     return false;
+    // }
+
+    if(form.DOB.value == ""){
         document.getElementById("DOBMissing").style.visibility = "visible";
         return false;
     }else{
@@ -75,11 +92,14 @@ function DOBChanged(){
 }
 
 function checkPostcode(){
-    if(document.getElementById("userForm").postcode.value == ""){
+    var form = document.getElementById("userForm")
+    var regex = /[0-9]{4}/;
+
+    if (regex.test(form.postcode.value)){
+        return true;
+    } else{
         document.getElementById("postcodeMissing").style.visibility = "visible";
         return false;
-    }else{
-        return true;
     }
 }
 

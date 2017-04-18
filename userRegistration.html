@@ -22,35 +22,36 @@
         </ul>
     </div>
     <!-- end header -->
-    <h1>Form</h1>
+
+    <h1>Create an account</h1>
     <div class="indent">
         <form id="userForm">
             <p>First Name: <input type="text" id="firstName" value="" onkeypress="firstNameChanged()" />
-                <span id="firstNameMissing" class="error-message">First Name is a required field</span></p>
+            <span id="firstNameMissing" class="error-message">Please enter a valid first name.</span></p>
 
             <p>Surname: <input type="text" id="surname" value="" onkeypress="surnameChanged()" />
-                <span id="surnameMissing" class="error-message">Surname is a required field</span></p>
+            <span id="surnameMissing" class="error-message">Please enter a valid surname.</span></p>
 
             <p>Email address: <input type="email" id="email" placeholder="email@example.com" onkeypress="emailChanged()" />
-                <span id="emailMissing" class="error-message" value="">Email is a required field</span></p>
+            <span id="emailMissing" class="error-message" value="">Please enter a valid email.</span></p>
 
             <p>Date of birth (dd/mm/yyyy): <input type="date" id="DOB" placeholder="dd/mm/yyyy" onkeypress="DOBChanged()" />
-                <span id="DOBMissing" class="error-message">D.O.B is a required field</span></p>
+            <span id="DOBMissing" class="error-message">Please enter a valid D.O.B.</span></p>
 
             <p>Postcode: <input type="text" id="postcode" value="" onkeypress="postcodeChanged()" />
-                <span id="postcodeMissing" class="error-message">Postcode is a required field</span></p>
+            <span id="postcodeMissing" class="error-message">Please enter a valid postcode.</span></p>
 
             <p>Create username: <input type="text" id="username" value="" onkeypress="usernameChanged()" />
-                <span id="usernameMissing" class="error-message">Username is a required field</span></p>
+            <span id="usernameMissing" class="error-message">Username is a required field.</span></p>
 
             <p>Create password: <input type="password" id="password" value="" onkeypress="passwordChanged()" />
-                <span id="passwordMissing" class="error-message">Password is a required field</span></p>
+            <span id="passwordMissing" class="error-message">Password is a required field.</span></p>
 
             <p>Confirm password: <input type="password" id="confirmPassword" onkeypress="password2Changed()" />
-                <span id="passwordsNotMatch" class="error-message">Passwords do not match</span></p>
+            <span id="passwordsNotMatch" class="error-message">Passwords do not match.</span></p>
 
             <p>Do you agree to our terms and conditions? <input type="checkbox" id="terms" onclick="termsChecked()" />
-                <span id="termsNotAgreed" class="error-message">You must agree to the terms and conditions to continue</span></p>
+            <span id="termsNotAgreed" class="error-message">You must agree to the terms and conditions to continue</span></p>
 
             <p><input type="button" value="Submit" onclick="validate();" /></p>
 
