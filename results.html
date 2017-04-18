@@ -20,15 +20,45 @@
         </ul>
     </div>
     <!-- end header -->
-    <p>its the results page brodie o</p>
-    <table>
+    <div class = "content"> 
+        <h1>Results</h1>
+        <div class = "indent">
+        <h4>Search Again:</h4> 
+        By Suburb: <input type="text" id="suburbIn" value="" /> By Park Name: <input type="text" id="parkIn" value=""/>
+        <button onclick = "getLocation()" id="getGeolocation">Use my Location</button>
+        <span id="geoLocationStatus"></span>
+        <form action="results.html" style = "display:inline">
+                <input type="submit" value="Find Parks"/>
+        </form>
+        </div>
+            
+    <table class = "resultsTable">
         <tr>
-            <th>nummer</th>
+            <td><a href = "itemPage.html"><img src = "placeholderPark1.jpg" width = "150" height = "150" description="park1"/></a></td>
+            <td><h3 class = "plainLink"><a href = "itemPage.html">Admiralty Towers 11 Park</a></h3></td>
+            <td><h5>Brisbane</h5></td>
+            <td><h5>Queen St</h5></td>
         </tr>
-        <th>stoof</th>
-        <tr>an entry</tr>
-        <tr>another entry</tr>
+        <tr>
+            <td><img src = "placeholderPark2.jpg" width = "150" height = "150" description="park1"/></td>
+            <td><h3>Boundary Street</h3></td>
+            <td><h5>Brisbane</h5></td>
+            <td><h5>Boundary St</h5></td>
+        </tr>
+        <tr>
+            <td><img src = "placeholderPark3.jpg" width = "150" height = "150" description="park1"/></td>
+            <td><h3>Cathedral Square</h3></td>
+            <td><h5>Brisbane</h5></td>
+            <td><h5>Ann St</h5></td>
+        </tr>
+        <tr>
+            <td><img src = "placeholderPark4.jpg" width = "150" height = "150" description="park1"/></td>
+            <td><h3>Chippendale St Cemetary</h3></td>
+            <td><h5>Brisbane</h5></td>
+            <td><h5>Hale St</h5></td>
+        </tr>
     </table>
+    </div>
 </body>
 
 </html>

@@ -15,11 +15,6 @@ h1{
     margin-top: 40px;
 }
 
-p{
-    margin-left:25px;
-}
-
-
 /*pageHeader*/
 .pageHeader{
     margin: 0;
@@ -85,3 +80,49 @@ p{
     padding: 1px;
 }
 
+<<<<<<< HEAD
+=======
+.indent{
+    margin-left: 25px;
+}
+
+.widget {
+  /* widget like div styling */
+  position: relative;
+  border-style: solid;
+  border-color: #292929;
+  border-width: 1px;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 2%;
+  padding: 1%;
+  float:left;
+}
+
+.resultsTable {
+    margin-left: 25px;
+    margin-top: 30px;
+    border-style: solid;
+    border-color: #292929;
+    border-width: 1px;
+    border-collapse: collapse;
+    width:90%;
+}
+
+.resultsTable td{
+    border-style: solid;
+    border-color: #292929;
+    border-width: 1px;
+    padding: 1%;
+}
+
+.plainLink a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.plainLink a:link{
+    text-decoration: none;
+    color: black;
+}
+>>>>>>> db9e57dfc0aa571b3da14d4db89dc308e0289cff
