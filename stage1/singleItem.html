@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="singleItemStyles.css" rel="stylesheet" type="text/css">
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(-27.4784018,152.9686691),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</head>
+<body>
+   <div id="header">
+    <h1>Brisbane's Public Parks</h1>
+    <div id="menu">
+      <a href="index.html">Home</a> <a href="singleItem.html">Sample Item</a> <a href="registration.html">Register</a> <a href="searchResults.html">Search Results</a>
+    </div>
+  </div> <!-- END HEADER -->
+  <div id="search">
+    <form>
+      <select>
+        <option value="default">Select Suburb</option>
+        <option value="ashgrove">Ashgrove</option>
+        <option value="paddington">Paddington</option>
+        <option value="mtCoot-tha">Mt Coot-tha</option>
+        <option value="indooroopilly">Indooroopilly</option>
+        <option value="kenmore">Kenmore</option>
+      </select>
+      <input name="search" type="text" value="" placeholder=" Or enter a post code or a suburb">
+      <select>
+        <option value="default">Rating</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div> <!-- END SEARCHBOX -->
+  <div id="item">
+    <h2>Mt Coot-tha Botanic Gardens, 4066</h2>
+  </div>
+  <div id="map-canvas"></div>
+  <div id="review-container">
+    <h3>Reviews</h3>
+    <p><b>Gary Smith</b> </p>
+    <p> Great Park</p>
+  </div>
+  <footer id="footer">
+    <p>Sai Whiley(n9454829) and Jemima Weir (n9478922)<p>
+  </footer><!-- END FOOTER -->
+</body>
+</html>

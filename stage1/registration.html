@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <link href="registrationStyles.css" rel="stylesheet" type="text/css">
+  <script src="registrationScript.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Brisbane's Public Parks</h1>
+    <div id="menu">
+      <a href="index.html">Home</a> <a href="singleItem.html">Sample Item</a> <a href="registration.html">Register</a> <a href="searchResults.html">Search Results</a>
+    </div>
+  </div> <!-- END HEADER -->
+  <div id="formContainer">
+    <form id="registrationForm" onsubmit="return validate();">
+      Username:<br>
+      <input type="text" name="username" onkeypress="resetusernameRequired()"><span id="usernameRequired" style="color:red; visibility:hidden;"> Username is required</span>
+      <br><br>
+      First Name:<br>
+      <input type="text" name="firstName"></input><br>
+      <br>
+      State:<br>
+      <select name="state">
+        <option value="QLD">QLD</option>
+        <option value="NSW">NSW</option>
+        <option value="ACT">ACT</option>
+        <option value="VIC">VIC</option>
+        <option value="TAS">TAS</option>
+        <option value="SA">SA</option>
+        <option value="WA">WA</option>
+        <option value="NT">NT</option>
+      </select><br>
+      <br>
+      Email:<br>
+      <input type="text" name="email"><br>
+      <br>
+      Confirm Email:<br>
+      <input type="text" name="confirmEmail"><br>
+      <br>
+      Password:<br>
+      <input type="password" name="password" onkeypress="resetPasswordRequired()"><span id="passwordRequired" style="color:red; visibility:hidden;"> Password is required</span>
+      <br><br>
+      Confirm Password:<br>
+      <input type="password" name="confirmPassword" onkeypress="resetPasswordIncorrect()"><span id="passwordIncorrect" style="color:red; visibility:hidden;"> Passwords must match</span>
+      <br><br>
+      <input type="submit" name="submitButton" value="Submit">
+    </form>
+  </div>
+  <footer id="footer">
+    <p>Sai Whiley(n9454829) and Jemima Weir (n9478922)<p>
+  </footer><!--END FOOTER-->
+</body>
+</html>

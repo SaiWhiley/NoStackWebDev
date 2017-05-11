@@ -22,7 +22,7 @@ h1{
 .pageHeader h1{
     margin: 0;
     padding: 10px;
-    background-color: #76323f;
+    background-color: #4caf50;
     display: block;
     text-align: center;
 }
@@ -46,7 +46,7 @@ h1{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333; 
+    background-color: #4caf50; 
 }
 
 .navBar li{
