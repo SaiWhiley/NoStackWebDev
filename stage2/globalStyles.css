@@ -20,7 +20,7 @@ body{
 }
 
 #header h1 {
-    color: rgd(0, 200, 0);
+    color: rgb(90, 200, 0);
     text-align: center;
     padding-top: 15px;
     text-shadow: 3px 3px 2px black;
