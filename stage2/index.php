@@ -5,5 +5,7 @@
 </head>
 
 <?php
-    include "header.php";
+    include "includes/header.php";
+    echo "<br>";
+    include "includes/search.php";
 ?>

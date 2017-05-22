@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    margin: 0 0 150px;
+    margin: 0 0 280px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(images/brisbanePark2.jpg);
     background-repeat: no-repeat;
@@ -27,27 +27,49 @@ body{
 }
 
 footer {
-    position: absolute;
-    background-color: rgb(0, 100, 0);
-    left: 0px;
-    bottom: 0px;
-    height: 90px;
-    width: 105%;
-    text-align: center;
-    padding-top: 20px;
+  position: absolute;
+  background-color: rgb(0, 100, 0);
+  left: 0px;
+  bottom: 0px;
+  height: 220px;
+  width: 105%;
+  text-align: center;
+  padding-top: 20px;
 }
 
-
-footer a, p {
-  padding-left: 10px;
-  padding-right: 10px;
-  color: rgb(0, 200, 0);
+footer a {
+  color: rgb(90, 200, 0);
   font-size: 12pt;
   text-decoration: none;
 }
 
+footer p {
+  color: rgb(90, 200, 0);
+  font-size: 12pt;
+  margin-top: 40px;
+}
+
 footer a:hover {
   color: white;
+}
+
+footer h3 {
+  color: rgb(90, 200, 0);
+  font-size: 16pt;
+  margin: 0;
+}
+
+footer #footerInfo {
+  margin-left: 325px;
+  color: white;
+  text-align: left;
+}
+
+#header h4 {
+  color: rgb(90, 200, 0);
+  text-align: center;
+  font-size: 16pt;
+  margin-top: -18px;
 }
 
 #menu {
@@ -68,24 +90,43 @@ footer a:hover {
 }
 
 #search {
-  padding: 20px;
-  text-align: center;
+  position: relative;
+  left: 24%;
+  width: 700px;
+  padding: 0;
+  text-align: left;
+  margin-top: -10px;
 }
 
-#search input {
-  width: 250px;
-  height: 25px;
-  font-size: 12pt;
-}
-
-#search select {
-  width: 125px;
+#search select, #search input {
+  width: 187px;
   height: 31px;
 }
 
 #search button {
   width: 125px;
   height: 31px;
+  color: white;
+  border: 1px solid rgb(90, 200, 0);
+  background-image: url(images/search.jpg);
+  float: right;
+}
+
+#search button:hover {
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgb(90, 200, 0);
+  background-image: url(images/searchHover.jpg);
+}
+
+#search h4 {
+  color: rgb(90, 200, 0);
+  padding: none;
+  margin-right: 48%;
+  margin-bottom: -13px;
+  margin-top: 0;
+  white-space: nowrap;
+  word-spacing: 320px;
 }
 
 #mapContainer {
@@ -93,4 +134,17 @@ footer a:hover {
   left: 30%;
   width: 750px;
   height: 400px;
+}
+
+#findUs a {
+  padding-right: 55px;
+}
+
+footer td {
+  width: 310px;
+}
+
+footer img {
+  position: absolute;
+  width: 50px;
 }
