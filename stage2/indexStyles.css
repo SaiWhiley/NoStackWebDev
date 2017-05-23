@@ -1,0 +1,19 @@
+#map-canvas {
+  left: 24%;
+  width: 700px;
+  height: 400px;
+}
+
+#status {
+  color: rgb(255, 25, 25);
+  margin-left: 24%;
+  margin-top: 35px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
+#mapTitle {
+  color: rgb(90, 200, 0);
+  margin-left: 24%;
+  margin-bottom: 0px;
+}

@@ -18,7 +18,7 @@
   <?php include "includes/header.php"; ?>
   <br/>
   <?php include "includes/search.php"; ?>
-	<?php //TODO include "includes/map.php"; ?>
+	<?php include "includes/map.php"; ?>
   <div id="searchResults">
 	  <?php
 		function distance($lat1, $lon1, $lat2, $lon2) {
