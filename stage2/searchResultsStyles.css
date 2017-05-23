@@ -1,0 +1,39 @@
+#map-canvas{
+    margin-top: 20px;
+    left: 24%;
+    width: 700px;
+    height: 400px;
+}
+
+#searchResults{
+    width: 700px;
+    margin-left: 24%;
+    text-align: left;
+    color: white;
+}
+
+#resultsTable{
+    width: 100%;
+}
+
+#resultsTable a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+#resultsTable td {
+    height: 40px;
+    border: 2px solid rgb(90, 200, 0);
+    background-color: rgb(0, 100, 0);
+}
+
+#resultsTable td:hover {
+    cursor: pointer;
+    opacity: 0.75;
+    border: 2px solid white;
+}
+
+#resultsTable tr {
+    margin: 80px;
+}
