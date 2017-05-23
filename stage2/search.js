@@ -1,3 +1,5 @@
+// author: Sai Whiley
+// May 2017
 function changeSearch(){
     var selected = document.getElementById("selectSearch").selectedIndex;
     document.getElementById("name").style.display = "none";
