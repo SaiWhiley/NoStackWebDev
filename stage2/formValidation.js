@@ -10,8 +10,8 @@ function validate(){
     var pwordMatch = checkPasswordMatch();
     var termsAgreed = checkTerms();
     if(firstNameOkay && surnameOkay && emailOkay && DOBOkay && postcodeOkay && usernameOkay && pwordOkay && pwordMatch && termsAgreed){
-        return true;
         window.alert("Form submitted");
+        return true;
     }else{
         return false;
     }
