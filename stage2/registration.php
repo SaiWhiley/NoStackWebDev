@@ -16,16 +16,19 @@
 
 
         if(isset($_POST['username'])){
+            //The problem is here
+            //echo "yes";
+            // $teststmt = $pdo->prepare('INSERT INTO users (FirstName,Surname) VALUES ("jordy", "bloop")');
+            // $teststmt->execute();
             try{
-               $stmt = $pdo->prepare('INSERT INTO users (FirstName,Surname,Email,DOB,Postcode,Username,Salt,Password) VALUES(:fname, :sname :email, :dob, :postcode, :username, "e3b0c44298f", SHA2(CONCAT(:pass, "e3b0c44298f"), 0));');
+               $stmt = $pdo->prepare('INSERT INTO users (FirstName,Surname,Email/*,DOB*/,Postcode,Username,Salt,Password) VALUES(:fname, :sname :email, :dob, :postcode, :username, "e3b0c44298f", SHA2(CONCAT(:pass, "e3b0c44298f"), 0));');
                 $stmt->bindValue(':fname', $_POST['firstName']);
                 $stmt->bindValue(':sname', $_POST['surname']);
                 $stmt->bindValue(':email', $_POST['email']);
-                $stmt->bindValue(':dob', $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day']);
+                //$stmt->bindValue(':dob', $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day']);
                 $stmt->bindValue(':postcode',$_POST['postcode']);
                 $stmt->bindValue(':username', $_POST['username']);
                 $stmt->bindValue(':pass', $_POST['password']);
-
                 $stmt->execute(); 
             }
             catch(PDOException $e){
