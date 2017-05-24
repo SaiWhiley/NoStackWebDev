@@ -25,6 +25,7 @@
                 $stmt->bindValue(':postcode',$_POST['postcode']);
                 $stmt->bindValue(':username', $_POST['username']);
                 $stmt->bindValue(':pass', $_POST['password']);
+
                 $stmt->execute(); 
             }
             catch(PDOException $e){
@@ -51,7 +52,7 @@
         <p>Email address: <input type="email" id="email" placeholder="email@example.com" onkeypress="emailChanged()" />
         <span id="emailMissing" class="error-message" value="">Please enter a valid email.</span></p>
 
-        <p>D.O.B (dd/mm/yyyy): <input type="date" id="DOB" placeholder="dd/mm/yyyy" onchange="DOBChanged()" />
+        <p>D.O.B (dd/mm/yyyy): <input type="text" id="DOB" placeholder="dd/mm/yyyy" onchange="DOBChanged()" />
         <span id="DOBMissing" class="error-message">Please enter a valid D.O.B.</span></p>
 
         <p>Postcode: <input type="text" id="postcode" value="" onkeypress="postcodeChanged()" />
