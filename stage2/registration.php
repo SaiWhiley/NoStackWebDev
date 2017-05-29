@@ -1,8 +1,4 @@
 <html>
-<?php 
-    
-    ?>
-
 <head>
     <meta charset="utf-8"/>
     <title>Brisbane Parks</title>
@@ -18,7 +14,7 @@
         include "includes/PDO.php";
         if(isset($_POST['username'])){
                     try{
-                    $stmt = $pdo->prepare('INSERT INTO users (FirstName,Surname,Email/*,DOB*/,Postcode,Username,Salt,Password) VALUES(:fname, :sname :email, :dob, :postcode, :username, "e3b0c44298f", SHA2(CONCAT(:pass, "e3b0c44298f"), 0));');
+                        $stmt = $pdo->prepare('INSERT INTO users (FirstName,Surname,Email/*,DOB*/,Postcode,Username,Salt,Password) VALUES(:fname, :sname, :email, :postcode, :username, "e3b0c44298f", SHA2(CONCAT(:pass, "e3b0c44298f"), 0));');
                         $stmt->bindValue(':fname', $_POST['firstName']);
                         $stmt->bindValue(':sname', $_POST['surname']);
                         $stmt->bindValue(':email', $_POST['email']);
@@ -34,11 +30,10 @@
                         $stmt->execute();
                         if ($stmt->rowCount() > 0)
                         {
-                            //Username exists
+                            echo "username already exists";
                         }
                     }
                 }
-
 ?>
 
 <div id = "formContainer">
