@@ -1,20 +1,24 @@
 
 function validate(){
-    var firstNameOkay = checkFirstName();
-    var surnameOkay = checkSurname();
-    var emailOkay = checkEmail();
-    var DOBOkay = checkDOB();
-    var postcodeOkay = checkPostcode();
-    var usernameOkay = checkUsername();
-    var pwordOkay = checkPassword();
-    var pwordMatch = checkPasswordMatch();
-    var termsAgreed = checkTerms();
-    if(firstNameOkay && surnameOkay && emailOkay && DOBOkay && postcodeOkay && usernameOkay && pwordOkay && pwordMatch && termsAgreed){
-        return true;
-        window.alert("Form submitted");
-    }else{
-        return false;
-    }
+
+    var submitButton = document.getElementById("submitButton");
+
+    submitButton.addEventListener("click", function(){
+
+        var firstNameOkay = checkFirstName();
+        var surnameOkay = checkSurname();
+        var emailOkay = checkEmail();
+        var DOBOkay = checkDOB();
+        var postcodeOkay = checkPostcode();
+        var usernameOkay = checkUsername();
+        var pwordOkay = checkPassword();
+        var pwordMatch = checkPasswordMatch();
+        var termsAgreed = checkTerms();
+        if(firstNameOkay && surnameOkay && emailOkay && DOBOkay && postcodeOkay && usernameOkay && pwordOkay && pwordMatch && termsAgreed){
+            window.alert("Form submitted");
+            document.getElementById("userForm").submit();
+        }
+    });
 }
 
 function checkFirstName(){

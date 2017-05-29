@@ -7,6 +7,8 @@ body{
     margin: 0 0 280px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(images/brisbanePark2.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     overflow-x: hidden;
     align-content: center;
@@ -46,7 +48,7 @@ footer a {
 footer p {
   color: rgb(90, 200, 0);
   font-size: 12pt;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 footer a:hover {
@@ -95,6 +97,7 @@ footer #footerInfo {
   width: 700px;
   padding: 0;
   text-align: left;
+  text-shadow: 2px 2px 2px black;
   margin-top: -10px;
 }
 
@@ -146,5 +149,5 @@ footer td {
 
 footer img {
   position: absolute;
-  width: 50px;
+  width:50px;
 }
