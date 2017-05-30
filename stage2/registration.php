@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Brisbane Parks</title>
+    <title>Brisbane Parks - Register</title>
     <link href="globalStyles.css" rel="stylesheet" type="text/css">
     <script type = "text/javascript" src ="registrationScript.js"></script>
     <link href="registrationStyles.css" rel="stylesheet" type="text/css">
@@ -39,34 +39,37 @@
 <div id = "formContainer">
     <form id = "userForm" onsubmit = "return validate();" method = "POST">
 
-        <p>First Name: <input type="text" name = "firstName" id="firstName" value="" onkeypress="firstNameChanged()" />
+        <p>First Name:</p><p> <input type="text" name = "firstName" id="firstName" value="" onkeypress="firstNameChanged()" />
         <span id="firstNameMissing" class="error-message">Please enter a valid first name.</span></p>
 
-        <p>Surname: <input type="text" name = "surname" id="surname" value="" onkeypress="surnameChanged()" />
+        <p>Surname:</p><p> <input type="text" name = "surname" id="surname" value="" onkeypress="surnameChanged()" />
         <span id="surnameMissing" class="error-message">Please enter a valid surname.</span></p>
 
-        <p>Email address: <input type="email" name="email" id="email" placeholder="email@example.com" onkeypress="emailChanged()" />
+        <p>Email address:</p><p> <input type="email" name="email" id="email" placeholder="email@example.com" onkeypress="emailChanged()" />
         <span id="emailMissing" class="error-message" value="">Please enter a valid email.</span></p>
 
-        <p>D.O.B (dd/mm/yyyy): <input type="text" name="DOB" id="DOB" placeholder="dd/mm/yyyy" onchange="DOBChanged()" />
+        <p>D.O.B (dd/mm/yyyy):</p><p> <input type="text" name="DOB" id="DOB" placeholder="dd/mm/yyyy" onchange="DOBChanged()" />
         <span id="DOBMissing" class="error-message">Please enter a valid D.O.B.</span></p>
 
-        <p>Postcode: <input type="text" name= "postcode" id="postcode" value="" onkeypress="postcodeChanged()" />
+        <p>Postcode:</p><p> <input type="text" name= "postcode" id="postcode" value="" onkeypress="postcodeChanged()" />
         <span id="postcodeMissing" class="error-message">Please enter a valid postcode.</span></p>
 
-        <p>Create username: <input type="text" name = "username" id="username" value="" onkeypress="usernameChanged()" />
+        <p>Create username:</p><p> <input type="text" name = "username" id="username" value="" onkeypress="usernameChanged()" />
         <span id="usernameMissing" class="error-message">Username is a required field.</span></p>
 
-        <p>Create password: <input type="password" name= "password" id="password" value="" onkeypress="passwordChanged()" />
+        <p>Create password:</p><p> <input type="password" name= "password" id="password" value="" onkeypress="passwordChanged()" />
         <span id="passwordMissing" class="error-message">Password is a required field.</span></p>
 
-        <p>Confirm password: <input type="password" name="confirmPassword" id="confirmPassword" onkeypress="password2Changed()" />
+        <p>Confirm password:</p><p> <input type="password" name="confirmPassword" id="confirmPassword" onkeypress="password2Changed()" />
         <span id="passwordsNotMatch" class="error-message">Passwords do not match.</span></p>
 
         <p>Do you agree to our terms and conditions? <input type="checkbox" id="terms" onclick="termsChecked()" />
         <span id="termsNotAgreed" class="error-message">You must agree to continue.</span></p>
 
-        <p><input type="submit" name = "submitButton" value="Submit"/></p>
+
+        <p><input type="submit" name = "submitButton" value="Submit" id="submitButton"/></p>
+
+
 
         </form>
     </div>

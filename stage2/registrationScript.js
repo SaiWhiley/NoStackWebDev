@@ -21,6 +21,11 @@ function validate(){
     });
 }
 
+function validateLogin() {
+    if (!usernameOkay()) return false;
+    return true;
+}
+
 function checkFirstName(){
     var form = document.getElementById("userForm")
     var regex1 = /^[a-z]+/i;
