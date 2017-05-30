@@ -1,31 +1,33 @@
 
+// function that checks all fields during registration and allows submition
+// if everything okay
 function validate(){
-
-    var submitButton = document.getElementById("submitButton");
-
-    submitButton.addEventListener("click", function(){
-
-        var firstNameOkay = checkFirstName();
-        var surnameOkay = checkSurname();
-        var emailOkay = checkEmail();
-        var DOBOkay = checkDOB();
-        var postcodeOkay = checkPostcode();
-        var usernameOkay = checkUsername();
-        var pwordOkay = checkPassword();
-        var pwordMatch = checkPasswordMatch();
-        var termsAgreed = checkTerms();
-        if(firstNameOkay && surnameOkay && emailOkay && DOBOkay && postcodeOkay && usernameOkay && pwordOkay && pwordMatch && termsAgreed){
-            window.alert("Form submitted");
-            document.getElementById("userForm").submit();
-        }
-    });
+    var firstNameOkay = checkFirstName();
+    var surnameOkay = checkSurname();
+    var emailOkay = checkEmail();
+    var DOBOkay = checkDOB();
+    var postcodeOkay = checkPostcode();
+    var usernameOkay = checkUsername();
+    var pwordOkay = checkPassword();
+    var pwordMatch = checkPasswordMatch();
+    var termsAgreed = checkTerms();
+    if(firstNameOkay && surnameOkay && emailOkay && DOBOkay && postcodeOkay && usernameOkay && pwordOkay && pwordMatch && termsAgreed){
+        window.alert("Form submitted");
+        document.getElementById("userForm").submit();
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
+// function that checks if the username is valid when logging in
 function validateLogin() {
     if (!usernameOkay()) return false;
     return true;
 }
 
+// tests for valid first name
 function checkFirstName(){
     var form = document.getElementById("userForm")
     var regex1 = /^[a-z]+/i;
@@ -40,10 +42,12 @@ function checkFirstName(){
     }
 }
 
+//hides error message (called on keypress)
 function firstNameChanged(){
      document.getElementById("firstNameMissing").style.visibility = "hidden";
 }
 
+// tests for valid surname
 function checkSurname(){
     var form = document.getElementById("userForm")
     var regex1 = /^[a-z]+/i;
@@ -57,11 +61,12 @@ function checkSurname(){
     }
 }
 
+//hides error message (called on keypress)
 function surnameChanged(){
      document.getElementById("surnameMissing").style.visibility = "hidden";
 }
 
-
+// tests for valid email
 function checkEmail(){
     var form = document.getElementById("userForm")
     var regex = /\S+@\S+\.\S+/;
@@ -75,11 +80,13 @@ function checkEmail(){
 
 }
 
+//hides error message (called on keypress)
 function emailChanged(){
     document.getElementById("emailMissing").style.visibility = "hidden";
 }
 
 
+// tests for valid date of birth (must be after 1900)
 function checkDOB(){
     var form = document.getElementById("userForm")
     var regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/;
@@ -93,10 +100,12 @@ function checkDOB(){
 
 }
 
+//hides error message (called on keypress)
 function DOBChanged(){
     document.getElementById("DOBMissing").style.visibility = "hidden";
 }
 
+// tests for valid postcode (4 digits)
 function checkPostcode(){
     var form = document.getElementById("userForm")
     var regex = /[0-9]{4}/;
@@ -109,11 +118,13 @@ function checkPostcode(){
     }
 }
 
+//hides error message (called on keypress)
 function postcodeChanged(){
     document.getElementById("postcodeMissing").style.visibility = "hidden";
 }
 
 
+// tests for valid surname (not blank)
 function checkUsername(){
     var form = document.getElementById("userForm")
     if(form.username.value == ""){
@@ -124,10 +135,12 @@ function checkUsername(){
     }
 }
 
+//hides error message (called on keypress)
 function usernameChanged(){
      document.getElementById("usernameMissing").style.visibility = "hidden";
 }
 
+// tests for valid password (not blank)
 function checkPassword(){
     var form = document.getElementById("userForm")
     if(form.password.value == ""){
@@ -138,10 +151,12 @@ function checkPassword(){
     }
 }
 
+//hides error message (called on keypress)
 function passwordChanged(){
      document.getElementById("passwordMissing").style.visibility = "hidden";
 }
 
+// tests for matching passwords
 function checkPasswordMatch(){
     var p1 = document.getElementById("userForm").password.value;
     var p2 = document.getElementById("userForm").confirmPassword.value;
@@ -153,11 +168,13 @@ function checkPasswordMatch(){
     }
 }
 
+//hides error message (called on keypress)
 function password2Changed(){
     document.getElementById("passwordsNotMatch").style.visibility = "hidden";
 }
 
 
+// tests if terms and conditions checkbox is ticked
 function checkTerms(){
     var form = document.getElementById("userForm")
     if(!form.terms.checked){
@@ -168,6 +185,7 @@ function checkTerms(){
     }
 }
 
+//hides error message (called on keypress)
 function termsChecked(){
     document.getElementById("termsNotAgreed").style.visibility = "hidden";
 }

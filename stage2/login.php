@@ -13,18 +13,25 @@
         include "includes/PDO.php";
     ?>
 
+<!-- USER LOGIN FORM -->
     <div id="loginFormContainer">
     	<form id="loginForm" onsubmit="return validateLogin();" method="POST">
-    		<p>Username:</p> <p><input type="text" name="username" id="username" onkeypress="usernameChanged()"><span id="usernameRequired" style="visibility: hidden;"> Username is required.</span></p>
-    		<p>Password:</p> <p><input type="password" name="password" id="password" onkeypress="passwordChanged()"><span id="passwordRequired" style="visibility: hidden;"> Password is required.</span></p>
-    		<p><input type="submit" name="submitButton" value="Login!">
-    		<span id="incorrectDetails" style="visibility: hidden;"> Incorrect details, please try again.</span></p>
+    		<div class="usernameBox">
+    			<p>Username:</p> <p><input type="text" name="username" id="username" onkeypress="usernameChanged()"><span id="usernameRequired" style="visibility: hidden;"> Username is required.</span></p>
+    		</div>
+    		<div class="passwordBox">
+    			<p>Password:</p> <p><input type="password" name="password" id="password" onkeypress="passwordChanged()"><span id="passwordRequired" style="visibility: hidden;"> Password is required.</span></p>
+    		</div>
+    		<p><input type="submit" name="loginButton" value="Login!"></p>
+    		<span id="incorrectDetails" style="visibility: hidden;"> Incorrect details, please try again.</span>
     	</form>
     </div>
     
-    <?php
+<!-- checks if username is in SQL database. if so, redirects to home page. if not, displays error
+ --> 
+ 	<?php
       if (isset($_POST['username']) && isset($_POST['password'])) {
-    //Check login against SQL, if success redirect to index and set vars, else display error
+
     $stmt = $pdo->prepare('SELECT * FROM users WHERE Username = :username AND Password = SHA2(CONCAT(:pass, "e3b0c44298f" ),0);');
     $stmt->bindValue(':username', $_POST['username']);
     $stmt->bindValue(':pass', $_POST['password']);

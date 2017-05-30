@@ -6,6 +6,7 @@ html{
 body{
     margin: 0 0 280px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* image from http://www.weekendnotes.com/new-farm-park/58125/ */
     background-image: url(images/brisbanePark2.jpg);
     background-size: 100%;
     background-attachment: fixed;
