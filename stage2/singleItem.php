@@ -35,14 +35,13 @@ function xss_clean($data) {
   // we are done...
   return $data;
 }
-
+  include_once "includes/session_start.php";
   include_once "includes/PDO.php";
-  //include_once "login_session.inc";
-  if (/*isset($_SESSION['username']) && */isset($_POST['comments'])) {
+  if (isset($_SESSION['username']) && isset($_POST['comments'])) {
     try {
       $date = date("Y-m-d");
-      $stmtIns = $pdo->prepare('INSERT INTO reviews (Username, Rating, Comments, parkID, DateLeft) VALUES ( "testusername" , :rating , :comments, :id, :dateleft);');
-      //$stmtIns->bindValue(':username', $_SESSION['username']);
+      $stmtIns = $pdo->prepare('INSERT INTO reviews (Username, Rating, Comments, parkID, DateLeft) VALUES ( :username, :rating , :comments, :id, :dateleft);');
+      $stmtIns->bindValue(':username', $_SESSION['username']);
       $stmtIns->bindValue(':rating', $_POST['rating']);
       $comment = xss_clean($_POST['comments']);
       $stmtIns->bindValue(':comments', $comment);

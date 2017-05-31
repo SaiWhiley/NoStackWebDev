@@ -10,18 +10,7 @@
       include "includes/header.php";
       include "includes/footer.php";
       include "includes/PDO.php";
-      //require "adminPermission.php";
-    
-      //checking if user is logged in
-      // if (isset($_GET['logout'])) {
-      //   if (isset($_SESSION['username'])) {
-      //     unset($_SESSION['username']);
-      //     header("Location: index.php");
-      //   }
-      // }
-
-
-// USER LOGIN FORM
+      
     echo '<div id="loginFormContainer">
       <form id="loginForm" action="login.php" method="POST">
         <div class="usernameBox">
