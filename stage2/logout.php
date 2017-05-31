@@ -17,11 +17,7 @@
 
 <?php
 
-    //logout the user from the session
-    //session_start();
-
-    $_SESSION['username'] = '';
-    $_SESSION['isAdmin'] = false;
+    session_destroy();
 
     echo '<div class="login_post">';
     echo '<h1 style="color: green; text-shadow: 3px 3px 2px black;"> Logging Out</h1>';
@@ -29,9 +25,7 @@
     echo '</div>';
 
 
-    $test = '../stage2/index.php';
-
-    header("Refresh: 3; $test");
+    header("Refresh: 3; index.php");
     exit();
 
 ?>

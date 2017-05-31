@@ -47,12 +47,11 @@
       if ( $stmt->rowCount() > 0 ) {
         // if details match, login works
         $result = $stmt->fetch();
-        //session_start();
         $_SESSION['username'] = $result['Username'];
-        //if ($result['isAdmin'] == true) {
-        //  $_SESSION['isAdmin'] = true;
-        //}
-        //header("Location: index.php");
+        if(isset($_SESSION['username'])){
+          header("Location: index.php");
+        }
+        
       } else {
         echo '
         <script>

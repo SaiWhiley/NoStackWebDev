@@ -11,7 +11,6 @@
   <title>Brisbane Parks</title>
   <link href="globalStyles.css" rel="stylesheet" type="text/css">
   <link href="searchResultsStyles.css" rel="stylesheet" type="text/css">
-	<?php // TODO include "includes/metaData.php"; ?>
 </head>
 
 <body>
