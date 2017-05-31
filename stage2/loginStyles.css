@@ -4,11 +4,6 @@
     visibility: hidden;
 }
 
-.incorrectDetails {
-	color: red;
-	visibility: hidden;
-}
-
 html {
   position: relative;
   min-height: 100%;
