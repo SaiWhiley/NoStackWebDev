@@ -86,7 +86,7 @@
             <span id="passwordsNotMatch" class="error-message">Passwords do not match.</span></p>
         </div>
 
-        <p>Do you agree to our terms and conditions? <input type="checkbox" id="terms" onclick="termsChecked()" />
+        <p>Do you agree to our terms and conditions? <input type="checkbox" id="terms" onclick="termsChecked()" /></p><p>
         <span id="termsNotAgreed" class="error-message">You must agree to continue.</span></p>
 
 

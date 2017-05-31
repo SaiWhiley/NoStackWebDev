@@ -63,7 +63,7 @@ footer h3 {
   margin: 0;
 }
 
-footer #footerInfo {
+footer #footerTable {
   margin-left: 325px;
   color: white;
   text-align: left;
@@ -132,6 +132,7 @@ footer #footerInfo {
   margin-top: 0;
   white-space: nowrap;
   word-spacing: 320px;
+  text-shadow: 1px 1px 1px black;
 }
 
 #mapContainer {
