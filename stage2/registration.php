@@ -18,11 +18,11 @@
         // attempting to insert user inputed values into users table in database
         if(isset($_POST['username'])){
                     try{
-                        $stmt = $pdo->prepare('INSERT INTO users (FirstName,Surname,Email/*,DOB*/,Postcode,Username,Salt,Password) VALUES(:fname, :sname, :email, :postcode, :username, "e3b0c44298f", SHA2(CONCAT(:pass, "e3b0c44298f"), 0));');
+                        $stmt = $pdo->prepare('INSERT INTO users (FirstName,Surname,Email,DOB,Postcode,Username,Salt,Password) VALUES(:fname, :sname, :email, STR_TO_DATE(:dob, "%d-%m-%Y"), :postcode, :username, "e3b0c44298f", SHA2(CONCAT(:pass, "e3b0c44298f"), 0));');
                         $stmt->bindValue(':fname', $_POST['firstName']);
                         $stmt->bindValue(':sname', $_POST['surname']);
                         $stmt->bindValue(':email', $_POST['email']);
-                        //$stmt->bindValue(':dob', $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day']);
+                        $stmt->bindValue(':dob', $_POST['DOB']);
                         $stmt->bindValue(':postcode',$_POST['postcode']);
                         $stmt->bindValue(':username', $_POST['username']);
                         $stmt->bindValue(':pass', $_POST['password']);
@@ -62,7 +62,7 @@
         </div>
 
         <div class="DOBtextbox">
-            <p>D.O.B (dd/mm/yyyy):</p><p> <input type="text" name="DOB" id="DOB" placeholder="dd/mm/yyyy" onchange="DOBChanged()" />
+            <p>D.O.B (dd-mm-yyyy):</p><p> <input type="text" name="DOB" id="DOB" placeholder="dd-mm-yyyy" onchange="DOBChanged()" />
             <span id="DOBMissing" class="error-message">Please enter a valid D.O.B.</span></p>
         </div>
 
