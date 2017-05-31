@@ -171,7 +171,7 @@
 					
 			catch(PDOException $e)
 			{
-				echo '<script> window.alert("UNKNOWN ERROR, WE DIDN\'NT ENCOUNTER THIS IN DEBUGGING"); </script>';
+				echo '<script> window.alert("Search failed with unknown error: ~~we did not encounter this in debugging~~"); </script>';
 				echo $e->getMessage();
 			}
 			
@@ -180,8 +180,7 @@
 	<br>
     <table id="resultsTable">
 		<?php
-			if (isset($res))
-			{
+			if (isset($res)){
 				foreach($res as $result)
 				{
 					echo '<script>addMarker("'.$result['id'].'","'.$result['Name'].'",'.$result['Latitude'].','.$result['Longitude'].');</script>';
@@ -191,7 +190,33 @@
 		?>
       
     </table>
+	<?php
+		if(empty($res)){
+				if($_POST['selectSearch'] == 'suburb'){
+					echo "<p>No Results found for suburb: ";
+					echo $_POST['suburb'];
+					echo "</p>";
+				}
+				if($_POST['selectSearch'] == 'distance'){
+					echo "<p>No Results found within ";
+					if($_POST['dist'] == 1){
+						echo "1km of your location</p>";
+					}
+					if($_POST['dist'] == 2){
+						echo "5km of your locaiton</p>";
+					}
+					if($_POST['dist'] == 3){
+						echo "10km of your locaiton</p>";
+					}
+				}
+				if($_POST['selectSearch'] == 'name'){
+					echo "<p>No Results found for name: ";
+					echo $_POST['query'];
+					echo "</p>";
+				}
+		}
+	?>
   </div>
-  <?php //include "footer.inc"; ?>
+  <?php include "includes/footer.php";?>
 </body>
 </html>

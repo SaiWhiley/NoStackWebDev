@@ -37,3 +37,11 @@
 #resultsTable tr {
     margin: 80px;
 }
+
+#noResultsBox p {
+  width: 656px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 2px solid rgb(90, 200, 0);
+  color: black;
+}
