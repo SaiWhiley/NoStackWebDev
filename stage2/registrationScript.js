@@ -12,11 +12,9 @@ function validate(){
     var pwordMatch = checkPasswordMatch();
     var termsAgreed = checkTerms();
     if(firstNameOkay && surnameOkay && emailOkay && DOBOkay && postcodeOkay && usernameOkay && pwordOkay && pwordMatch && termsAgreed){
-        window.alert("Form submitted");
         document.getElementById("userForm").submit();
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }

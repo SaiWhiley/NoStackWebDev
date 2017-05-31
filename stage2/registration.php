@@ -17,29 +17,34 @@
 
         // attempting to insert user inputed values into users table in database
         if(isset($_POST['username'])){
-                    try{
-                        $stmt = $pdo->prepare('INSERT INTO users (FirstName,Surname,Email,DOB,Postcode,Username,Salt,Password) VALUES(:fname, :sname, :email, STR_TO_DATE(:dob, "%d-%m-%Y"), :postcode, :username, "e3b0c44298f", SHA2(CONCAT(:pass, "e3b0c44298f"), 0));');
-                        $stmt->bindValue(':fname', $_POST['firstName']);
-                        $stmt->bindValue(':sname', $_POST['surname']);
-                        $stmt->bindValue(':email', $_POST['email']);
-                        $stmt->bindValue(':dob', $_POST['DOB']);
-                        $stmt->bindValue(':postcode',$_POST['postcode']);
-                        $stmt->bindValue(':username', $_POST['username']);
-                        $stmt->bindValue(':pass', $_POST['password']);
-                        $stmt->execute(); 
-                    }
-                    //throws an error if the username is already taken
-                    catch(PDOException $e){
-                        $stmt = $pdo->prepare('SELECT * FROM users WHERE Username = :user');
-                        $stmt->bindValue(':user', $_POST['username']);
-                        $stmt->execute();
-                        if ($stmt->rowCount() > 0)
-                        {
-                            echo "username already exists";
-                        }
-                    }
+            try{
+                $stmt = $pdo->prepare('INSERT INTO users (FirstName,Surname,Email,DOB,Postcode,Username,Salt,Password) VALUES(:fname, :sname, :email, STR_TO_DATE(:dob, "%d-%m-%Y"), :postcode, :username, "e3b0c44298f", SHA2(CONCAT(:pass, "e3b0c44298f"), 0));');
+                $stmt->bindValue(':fname', $_POST['firstName']);
+                $stmt->bindValue(':sname', $_POST['surname']);
+                $stmt->bindValue(':email', $_POST['email']);
+                $stmt->bindValue(':dob', $_POST['DOB']);
+                $stmt->bindValue(':postcode',$_POST['postcode']);
+                $stmt->bindValue(':username', $_POST['username']);
+                $stmt->bindValue(':pass', $_POST['password']);
+                $stmt->execute(); 
+                echo '<script>
+                    window.alert("Registration form successfully submitted.");
+                </script>';
+            }
+            //throws an error if the username is already taken
+            catch(PDOException $e){
+                $stmt = $pdo->prepare('SELECT * FROM users WHERE Username = :user');
+                $stmt->bindValue(':user', $_POST['username']);
+                $stmt->execute();
+                if ($stmt->rowCount() > 0)
+                {
+                    echo '<script>
+                        window.alert("Username already exists.")
+                    </script>';
                 }
-?>
+            }
+        }
+    ?>
 
 
 <!-- USER FORM -->
@@ -47,7 +52,15 @@
     <form id = "userForm" onsubmit = "return validate();" method = "POST">
 
         <div class="fNameTextbox">
-            <p>First Name:</p><p> <input type="text" name = "firstName" id="firstName" value="" onkeypress="firstNameChanged()" />
+            <p>First Name:</p>
+            <?php
+            echo '<p> <input type="text" name = "firstName" id="firstName" value="" onkeypress="firstNameChanged()"';
+            
+                if (isset($_POST['firstName'])){
+                    echo 'value"'.$_POST['firstName'].'"';
+                }
+                echo '>';
+            ?>
             <span id="firstNameMissing" class="error-message">Please enter a valid first name.</span></p>
         </div>
 
