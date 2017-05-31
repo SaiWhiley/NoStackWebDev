@@ -52,11 +52,11 @@
 				}
 				if ($_POST['sort'] == "ratingH")
 				{
-					$sortQuery = ' ORDER BY Ratings DESC';
+					$sortQuery = ' ORDER BY Rating DESC';
 				}
 				if ($_POST['sort'] == "ratingL")
 				{
-					$sortQuery = ' ORDER BY Ratings ASC';
+					$sortQuery = ' ORDER BY Rating ASC';
 				}
 
 

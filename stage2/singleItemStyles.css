@@ -18,6 +18,10 @@
   margin-bottom: -10px;
 }
 
+#item h4{
+  margin-left: 18px;
+}
+
 #writeComment img:hover {
   cursor: pointer;
 }

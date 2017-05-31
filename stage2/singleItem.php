@@ -3,7 +3,6 @@
   //include_once "login_session.inc";
   if (/*isset($_SESSION['username']) && */isset($_POST['comments'])) {
     try {
-		echo 'Review Submitted';
       $date = date("Y-m-d");
       $stmtIns = $pdo->prepare('INSERT INTO reviews (Username, Rating, Comments, parkID, DateLeft) VALUES ( "testusername" , :rating , :comments, :id, :dateleft);');
       //$stmtIns->bindValue(':username', $_SESSION['username']);
@@ -47,6 +46,7 @@
         $stmt->execute();
         $parkResults = $stmt->fetch();
         echo '<h2>'.$parkResults['Name'].'</h2>';
+        echo '<h4>Rating: '.$parkResults['Rating'].'</h4>';
     }
     catch(PDOException $e){
         echo $e->getMessage();
